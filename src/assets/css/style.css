@@ -1,0 +1,106 @@
+body {
+    background-color:black;
+    font-family: sans-serif, 'Segoe UI', Tahoma, Verdana;
+    margin:0;
+    
+}
+
+.content {
+    background: #fff;
+    width: 1226px;
+    height: 790px;
+    border-radius: 0px;
+}
+
+.stock-box {
+    position: relative;
+    width: 298px;
+    margin: 48px;
+    top: -60px;
+    left: 10px;
+    border-top: 1px solid #004d99;
+    border-bottom: 1px solid#004d99;
+    color: #004d99;
+}
+
+.stock-stats {
+    height: 100px;
+}
+
+.logo {
+    padding:48px;
+}
+
+.chart-img {
+    position:absolute;
+    top: 78px;
+    width: 728px;
+    height: 418px;
+}
+
+.calledby-img {
+    width: 400px;
+    height: 100px;
+    position: relative;
+    left: 420px;
+    top: -70px;
+}
+
+.stock-return {
+    font-size: 80px;
+    position:absolute;
+    right: 0px;
+}
+
+h1, h2, h3 {
+    margin: 28px;
+    text-align: center;
+    
+}
+
+h1 {
+    font-size:100px;
+}
+
+.idea, .idea-value {
+    color: green;
+}
+
+.idea-value, .high-value {
+    font-size:40px;
+}
+
+.high, .high-value {
+    color: red;
+}
+
+.stock-stats {
+    width:96%;
+    position: relative;
+    bottom: 80px;
+    color: #004d99;
+    font-size: 26px;
+}
+
+.stock-stats2 {
+    width: 32%;
+    position: relative;
+    bottom: 20px;
+    color: #004d99;
+}
+
+.stock-stats tr {
+    text-align: center;
+}
+
+.stock-stats th {
+    font-size: 20px;
+}
+
+.stock-stats2 tr {
+    text-align: center;
+}
+
+.stock-stats2 th {
+    font-size: 20px;
+}
