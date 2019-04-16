@@ -103,7 +103,7 @@
                           <td>{{stock.volume}}</td>
                           <td>{{stock.calledby}}</td>
                           <td>{{stock.time}}</td>
-                          <td class="stock-return">{{stock.maxreturn}}%</td>
+                          <td class="stock-return">{{(stock.high / stock.price * 100).toFixed(0)}}%</td>
                       </tr>
                   </table>
                   <img class="calledby-img" :src="ideaFile.url"/>
@@ -197,8 +197,7 @@
         high: 6.69,
         sector: 'Pharma',
         volume: '39.9k',
-        calledby: 'Vegas',
-        maxreturn: 130
+        calledby: 'Vegas'
       },
       ideaFile: {
         name: '',
