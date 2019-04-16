@@ -1,28 +1,74 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app id="sandbox" :dark="dark">
+    <v-navigation-drawer
+      v-model="primaryDrawer.model"
+      :permanent="primaryDrawer.type === 'permanent'"
+      :temporary="primaryDrawer.type === 'temporary'"
+      :clipped="primaryDrawer.clipped"
+      :floating="primaryDrawer.floating"
+      :mini-variant="primaryDrawer.mini"
+      absolute
+      overflow
+      app
+    ></v-navigation-drawer>
+    <v-toolbar :clipped-left="primaryDrawer.clipped" app absolute>
+      <v-toolbar-side-icon
+        v-if="primaryDrawer.type !== 'permanent'"
+        @click.stop="primaryDrawer.model = !primaryDrawer.model"
+      ></v-toolbar-side-icon>
+      <v-toolbar-title>Image Builder</v-toolbar-title>
+    </v-toolbar>
+    <v-content>
+      <v-container fluid>
+        <v-layout align-center justify-center>
+          <v-flex xs10>
+            <v-card>
+              <v-card-text>
+                <v-layout row wrap>
+                  <v-flex xs12 md6>
+                    <v-switch v-model="dark" primary label="Dark"></v-switch>
+                    <v-text-field
+                    v-model="firstname"
+                    :rules="nameRules"
+                    :counter="10"
+                    label="First name"
+                    required
+                  ></v-text-field>
+                  </v-flex>
+                 
+                </v-layout>
+              </v-card-text>
+              <v-card-actions>
+                <v-spacer></v-spacer>
+                <v-btn flat>Cancel</v-btn>
+                <v-btn flat color="primary">Submit</v-btn>
+              </v-card-actions>
+            </v-card>
+          </v-flex>
+        </v-layout>
+      </v-container>
+    </v-content>
+    <v-footer :inset="footer.inset" app>
+      <span class="px-3">&copy; {{ 'iluvstocks' + new Date().getFullYear() }}</span>
+    </v-footer>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'app',
-  components: {
-    HelloWorld
+  export default {
+    data: () => ({
+      dark: true,
+      drawers: ['Default (no property)', 'Permanent', 'Temporary'],
+      primaryDrawer: {
+        model: null,
+        type: 'default (no property)',
+        clipped: false,
+        floating: false,
+        mini: false
+      },
+      footer: {
+        inset: false
+      }
+    })
   }
-}
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
