@@ -67,8 +67,7 @@
               </v-card-text>
               <v-card-actions>
                 <v-spacer></v-spacer>
-                <v-btn flat>Cancel</v-btn>
-                <v-btn v-on:click="download" flat color="primary">Download</v-btn>
+                <v-btn v-on:click="download" class="primary" flat >Download</v-btn>
               </v-card-actions>
             </v-card>
           </v-flex>

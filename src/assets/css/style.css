@@ -104,3 +104,8 @@ h1 {
 .stock-stats2 th {
     font-size: 20px;
 }
+
+.v-card__actions {
+    width: 10%;
+    padding:10px 10px 30px 10px;
+}
