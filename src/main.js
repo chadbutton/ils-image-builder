@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import './plugins/vuetify'
 import Builder from './Builder.vue'
-import Images from './Images.vue'
 import vuecustomElement from 'vue-custom-element'
 import UploadButton from 'vuetify-upload-button'
 import VueRouter from 'vue-router'
@@ -12,13 +11,6 @@ Vue.use(vuecustomElement)
 Vue.customElement('upload-btn', UploadButton)
 
 Vue.config.productionTip = false
-
-const router = new VueRouter({
-  routes: [
-    { path: '/builder', component: Builder },
-    { path: '/images', component: Images }
-  ]
-})
 
 new Vue({
   render: h => h(Builder),
