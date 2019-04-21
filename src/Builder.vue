@@ -124,7 +124,7 @@
                           <td>{{stock.volume}}</td>
                           <td>{{stock.calledby}}</td>
                           <td>{{stock.time}}</td>
-                          <td class="stock-return">{{(stock.high / stock.price * 100).toFixed(0)}}%</td>
+                          <td class="stock-return">{{((stock.high - stock.price) / stock.price * 100).toFixed(0)}}%</td>
                       </tr>
                   </table>
                   <img class="calledby-img" :src="ideaFile.url"/>
@@ -165,7 +165,6 @@
             return
           }
 
-          console.log(file)
           const fr = new FileReader ()
           fr.readAsDataURL(file)
           fr.addEventListener('load', () => {
@@ -173,7 +172,6 @@
             this.chartFile.file = file // this is an image file that can be sent to server...
           })
         } else {
-          console.log('file was undefined')
           this.chartFile.name = ''
           this.chartFile.file = ''
           this.chartFile.url = ''
@@ -181,8 +179,6 @@
       },
       ideaFileChanged (file) {
         
-        console.log(file)
-
         if(file !== undefined) {
           this.ideaFile.name = file.name
           if(this.ideaFile.name.lastIndexOf('.') <= 0) {
@@ -195,7 +191,6 @@
             this.ideaFile.file = file // this is an image file that can be sent to server...
           })
         } else {
-          console.log('file was undefined')
           
           this.ideaFile.name = ''
           this.ideaFile.file = ''
@@ -218,7 +213,7 @@
     components: {
       'upload-btn': UploadButton
     },
-    data: vm => ({
+    data: () => ({
       dark: true,
       menu: '',
       chartUploadButtonTitle: 'Add Chart File',
