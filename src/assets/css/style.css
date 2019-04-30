@@ -42,20 +42,19 @@ body {
     width: 400px;
     height: 100px;
     position: relative;
-    left: 420px;
-    top: -70px;
+    left: 500px;
+    top: -80px;
 }
 
 .stock-return {
     font-size: 80px;
     position:absolute;
-    left: 1000px;
+    right: -16px;
 }
 
 h1, h2, h3 {
     margin: 28px;
     text-align: center;
-    
 }
 
 h1 {
@@ -75,7 +74,7 @@ h1 {
 }
 
 .stock-stats {
-    width:98%;
+    width:95%;
     position: relative;
     bottom: 80px;
     color: #004d99;
