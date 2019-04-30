@@ -5,6 +5,10 @@ body {
     
 }
 
+#app {
+    margin-top: 0px;
+}
+
 .content {
     background: #fff;
     width: 1226px;
