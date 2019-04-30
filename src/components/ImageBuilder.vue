@@ -100,7 +100,7 @@
             <v-card>
               <v-card-text>
                 <div class="content">
-                  <img class="logo" src="./ilslogo.png">
+                  <img class="logo" src="../assets/ilslogo.png">
                   <img class="chart-img" :src="chartFile.url"/>
                   <div class="stock-box">
                           <h3>PLAY OF THE DAY</h3>

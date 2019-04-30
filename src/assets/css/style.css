@@ -28,11 +28,14 @@ body {
 }
 
 .logo {
+    position:relative;
+    left: -400px;
     padding:48px;
 }
 
 .chart-img {
-    position:absolute;
+    right: 350px;
+    position: absolute;
     top: 78px;
     width: 728px;
     height: 418px;
@@ -42,8 +45,8 @@ body {
     width: 400px;
     height: 100px;
     position: relative;
-    left: 500px;
     top: -80px;
+    right:-90px;
 }
 
 .stock-return {
