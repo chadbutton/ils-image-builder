@@ -17,7 +17,7 @@ export default new Router({
     {
       path: '/builders/playoftheday',
       name: 'ibuilder',
-      component: () => import(/* webpackChunkName: "about" */ './views/ImageBuilder.vue')
+      component: ImageBuilder
     }
   ]
 })
